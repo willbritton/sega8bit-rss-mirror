@@ -14,12 +14,12 @@ jobs:
     - name: Download
       continue-on-error: false
       run: |
-        git config --global user.email "will@undeveloper.com"
-        git config --global user.name "WBritton"
         wget -O public https://shinobiman.proboards.com/rss/public
     - name: Commit
       continue-on-error: true
       run: |
+        git config --global user.email "will@undeveloper.com"
+        git config --global user.name "WBritton"
         git add public
         git commit -m 'Update'
         git push
