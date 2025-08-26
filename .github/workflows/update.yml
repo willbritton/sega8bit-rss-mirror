@@ -13,8 +13,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Update
       run: |
-        # gh auth login
-        gh auth setup-git
+        # gh auth setup-git
         git config --global user.email "will@undeveloper.com"
         git config --global user.name "WBritton"
         wget https://shinobiman.proboards.com/rss/public
