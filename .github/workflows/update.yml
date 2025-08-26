@@ -21,5 +21,5 @@ jobs:
         git add public
         git commit -m 'Update'
         git push
-      # env:
-        # GH_TOKEN: ${{ github.token }}
+      env:
+        GH_TOKEN: ${{ github.token }}
