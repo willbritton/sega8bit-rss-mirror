@@ -1,0 +1,20 @@
+name: Update
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  update:
+    # runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Update
+      run: |
+        wget https://shinobiman.proboards.com/rss/public
+        git add public
+        git commit -m 'Update'
+        git push
+      # env:
+        # GH_TOKEN: ${{ github.token }}
