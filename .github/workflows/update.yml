@@ -11,13 +11,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Update
-      continue-on-error: true
+    - name: Download
+      continue-on-error: false
       run: |
-        # gh auth setup-git
         git config --global user.email "will@undeveloper.com"
         git config --global user.name "WBritton"
         wget -O public https://shinobiman.proboards.com/rss/public
+    - name: Commit
+      continue-on-error: true
+      run: |
         git add public
         git commit -m 'Update'
         git push
