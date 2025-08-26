@@ -15,6 +15,7 @@ jobs:
       run: |
         # git config --global user.email "will@undeveloper.com"
         # git config --global user.name "WBritton"
+        gh auth login
         gh auth setup-git
         wget https://shinobiman.proboards.com/rss/public
         git add public
