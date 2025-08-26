@@ -12,6 +12,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Update
+      continue-on-error: true
       run: |
         # gh auth setup-git
         git config --global user.email "will@undeveloper.com"
