@@ -14,7 +14,7 @@ jobs:
     - name: Download
       continue-on-error: false
       run: |
-        for i in 1 2 3 4 5; do wget -O public https://shinobiman.proboards.com/rss/public && break || sleep 10; done
+        for i in 1 2 3; do wget -O public https://shinobiman.proboards.com/rss/public && break || sleep 10; done
     - name: Commit
       continue-on-error: true
       run: |
